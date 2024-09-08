@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Gallery and Backend Programming Languages</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 56px; /* Adjusted for Bootstrap navbar */
+      background: url('src/img2.jpg') fixed center; /* Subtle gradient background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #343a40; /* Dark gray text color for the body */
+    }
+    .navbar {
+      background-color: #343a40; /* Dark gray navbar background */
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #ffffff; /* White text color for navbar links */
+    }
+    .navbar-toggler-icon {
+      background-color: #ffffff; /* White color for navbar toggle icon */
+    }
+    .photo {
+      text-align: center;
+      background-color: #ffffff; /* White background for photo container */
+      padding: 20px;
+      border: 1px solid #dee2e6; /* Light gray border */
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light box shadow */
+    }
+    .photo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .photo:hover img {
+      transform: scale(1.1);
+    }
+    .programming-languages {
+      margin-top: 40px;
+      color: #343a40; /* Dark gray text color for section headings */
+    }
+    h3 {
+      color: rgb(0, 255, 166); /* Blue text color for section headings */
+    }
+    h4 {
+      color: #ffbb00; /* Blue text color for programming language names */
+    }
+    p {
+      color: #495057; /* Dark gray text color for descriptions */
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Photo Gallery</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <!-- Add any additional menu items if needed -->
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4 programming-languages">Photo Gallery</h2>
+    <!-- Programming Languages Section -->
+    <div class="programming-languages">
+      <h3 class="text-center mb-4">Best 6 Backend Programming Languages</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="src/java.jpeg" alt="Java">
+            <h4>Java</h4>
+            <p>Java is a versatile, object-oriented programming language known for its portability and platform independence. It is widely used in enterprise-level applications and web development.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="src/python.png" alt="Python">
+            <h4>Python</h4>
+            <p>Python is a high-level, interpreted language with a focus on readability and ease of use. It is commonly used for web development, data science, and automation tasks.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="src/javascript.jpeg" alt="JavaScript">
+            <h4>JavaScript</h4>
+            <p>JavaScript is a scripting language commonly used for client-side web development. It enables dynamic content and interactivity in web applications.</p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="row">
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="src/ruby.png" alt="Ruby">
+            <h4>Ruby</h4>
+            <p>Ruby is an object-oriented, dynamic language known for its simplicity and productivity. It is often used with the Ruby on Rails framework for web development.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="src/php.png" alt="PHP">
+            <h4>PHP</h4>
+            <p>PHP is a server-side scripting language widely used for web development. It is embedded in HTML and is known for its ability to handle dynamic content.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="src/csh.jpeg" alt="C#">
+            <h4>C#</h4>
+            <p>C# (C Sharp) is a modern, object-oriented programming language developed by Microsoft. It is widely used for building Windows applications and web services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

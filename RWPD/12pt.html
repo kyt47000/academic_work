@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navigation / Pills</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery JavaScript link -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Bootstrap JavaScript link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <h2>Navigation tabs / Toggleable Pills</h2>
+        <br>
+        <!-- Nav pills -->
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#home">DSA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu1">Unit 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu2">Unit 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu3">Unit 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu4">Unit 4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu5">Unit 5</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <h3>DSA</h3>
+                <p>Course Title: Data Structures and Algorithms <br>(Course Code: 4330704)</p>
+            </div>
+            <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Unit 1</h3>
+                <p>Basic Concepts of Data Structures</p>
+            </div>
+            <div id="menu2" class="container tab-pane fade"><br>
+                <h3>Unit 2</h3>
+                <p>Strings</p>
+            </div>
+            <div id="menu3" class="container tab-pane fade"><br>
+                <h3>Unit 3</h3>
+                <p>Stack and Queue</p>
+            </div>
+            <div id="menu4" class="container tab-pane fade"><br>
+                <h3>Unit 4</h3>
+                <p>Linked List</p>
+            </div>
+            <div id="menu5" class="container tab-pane fade"><br>
+                <h3>Unit 5</h3>
+                <p>Trees</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

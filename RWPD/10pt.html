@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Responsive Web Page</title>
+
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Bootstrap JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript link -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Odd Semesters
+        </button>
+        <div class="dropdown-menu">
+            <button type="button" class="dropdown-item" onclick="showCourses('f1')">Semester 1</button>
+            <button type="button" class="dropdown-item" onclick="showCourses('f3')">Semester 3</button>
+            <button type="button" class="dropdown-item" onclick="showCourses('f5')">Semester 5</button>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Even Semesters
+        </button>
+        <div class="dropdown-menu">
+            <button type="button" class="dropdown-item" onclick="showCourses('f2')">Semester 2</button>
+            <button type="button" class="dropdown-item" onclick="showCourses('f4')">Semester 4</button>
+            <button type="button" class="dropdown-item" onclick="showCourses('f6')">Semester 6</button>
+        </div>
+    </div>
+
+    <div class="btn-toolbar mt-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2 collapse" id="f1" role="group" aria-label="Odd Semesters Courses">
+            <button type="button" class="btn btn-outline-primary">Course 1</button>
+            <button type="button" class="btn btn-outline-primary">Course 1</button>
+        </div>
+        <div class="btn-group me-2 collapse" id="f3" role="group" aria-label="Odd Semesters Courses">
+            <button type="button" class="btn btn-outline-primary">Course 3</button>
+            <button type="button" class="btn btn-outline-primary">Course 3</button>
+        </div>
+        <div class="btn-group me-2 collapse" id="f5" role="group" aria-label="Odd Semesters Courses">
+            <button type="button" class="btn btn-outline-primary">Course 5</button>
+            <button type="button" class="btn btn-outline-primary">Course 5</button>
+        </div>
+
+        <div class="btn-group me-2 collapse" id="f2" role="group" aria-label="Even Semesters Courses">
+            <button type="button" class="btn btn-outline-primary">Course 2</button>
+            <button type="button" class="btn btn-outline-primary">Course 2</button>
+        </div>
+        <div class="btn-group me-2 collapse" id="f4" role="group" aria-label="Even Semesters Courses">
+            <button type="button" class="btn btn-outline-primary">Course 4</button>
+            <button type="button" class="btn btn-outline-primary">Course 4</button>
+        </div>        
+        <div class="btn-group me-2 collapse" id="f6" role="group" aria-label="Even Semesters Courses">
+            <button type="button" class="btn btn-outline-primary">Course 6</button>
+            <button type="button" class="btn btn-outline-primary">Course 6</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showCourses(semester) {
+        // Hide all courses
+        document.querySelectorAll('.btn-toolbar .btn-group').forEach(function (courseGroup) {
+            courseGroup.classList.remove('show');
+        });
+
+        // Show the selected semester's courses
+        document.getElementById(semester).classList.add('show');
+    }
+</script>
+
+</body>
+</html>

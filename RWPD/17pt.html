@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Providers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .service-panel {
+        margin-top: 20px;
+    }
+
+    .list-group>button {
+        text-align: left;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alerts"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="list-group">
+                    <button type="button" class="btn btn-outline-primary service-btn" data-service="Internet Service Providers">Internet Service Providers</button>
+                    <button type="button" class="btn btn-outline-primary service-btn" data-service="Alifi Service Providers">Alifi Service Providers</button>
+                    <button type="button" class="btn btn-outline-primary service-btn" data-service="Cybersecurity Solutions Providers">Cybersecurity Solutions Providers</button>
+                    <button type="button" class="btn btn-outline-primary service-btn" data-service="Hacker Providers">Hacker Providers</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row service-panel">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>Service Provider Information</h3>
+                        <div class="service-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(".service-btn").on("click", function () {
+            let service = $(this).data("service");
+
+            let successAlert = `<div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Inquiry posted</strong> The ${service} will call you soon.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
+            let warningAlert = `<div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>Inquiry posted</strong> Your inquiry about ${service} is posted, but be careful while working with them.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
+            let errorAlert = `<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Error</strong> Service '${service}' is currently unavailable.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
+
+            if (service == "Hacker Providers") {
+                $(".alerts").prepend(errorAlert);
+            } else if (service == "Cybersecurity Solutions Providers") {
+                $(".alerts").prepend(warningAlert);
+            } else {
+                $(".alerts").prepend(successAlert);
+            }
+
+            $(".service-info").html(`<p><strong>${service}</strong> provides various services. Contact them for more information.</p>`);
+        });
+
+        $(".alerts").on("closed.bs.alert", function () {
+            showMessage("Alert closed!");
+        });
+
+        function showMessage(message) {
+            alert(message);
+        }
+    </script>
+</body>
+
+</html>

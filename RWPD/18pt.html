@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+</head>
+
+<style>
+    @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family:'Lato', sans-serif !important;
+        font-size: 13pt !important;
+        font-weight: 300 !important;
+    }
+    .container-fluid {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+    #myPageContent, section {
+        height:100% !important;
+        width:100% !important;
+    }
+    #home { background: linear-gradient(135deg, #00B274, #005C40); } 
+    #portfolio { background: linear-gradient(135deg, #0096D6, #00325A); } 
+    #aboutme { background: linear-gradient(135deg, #D75BA2, #79275E); } 
+    #contact { background: linear-gradient(135deg, #E9AC40, #7E5B23); } 
+    footer {
+        background-color: #31353A; color: #FFF;
+        text-align: right;
+        font-size: 10pt !important; padding: 30px;
+    }
+    .myLogo {
+        max-height: 20px;
+        height: 100%;
+        width: 151px;
+        font-family: 'Lato', sans-serif;
+        color: #FFF;
+    }
+    .myLogo span { color: #F05557; font-weight:normal; }
+    .navbar {
+        opacity: 0.9;
+        filter: Alpha(opacity=90);
+    }
+    .navbar ul li {
+        color: #FFF !important;
+        font-size: 13pt !important;
+    }
+    .navbar .active a, .nav a:focus {
+        color:#F05557 !important;
+        background-color: transparent !important;
+    }
+    .navbar-nav a::before, .navbar-nav a::after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 300%;
+        color: white;
+        font-weight: 1000;
+    }
+</style>
+
+<body data-spy="scroll" data-offset="0" data-target="#myNavbar">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar- primary navbar-dark navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data- toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand myLogo" href="#">By K</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse"> 
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Services</a></li> 
+                    <li><a href="#aboutme">About</a></li> 
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="myPageContent" class="container-fluid"> 
+        <section id="home">
+            <div class="content">
+                Home Section
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="content">
+                Services Section
+            </div>
+        </section>
+        <section id="aboutme"> 
+            <div class="content">
+                About Us Section
+            </div>
+        </section>
+        <section id="contact">
+            <div class="content">Contact Us Section</div>
+        </section>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</html>
